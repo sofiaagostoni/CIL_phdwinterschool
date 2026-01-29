@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ISM"  # Il nome che userai in 'import ISM'
+version = "0.1.0"
+description = "Libreria per CIL PhD Winter School"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    # Aggiungi qui le librerie necessarie, es:
+    # "numpy",
+    # "h5py",
+]
+
+[tool.setuptools]
+packages = ["ISM"]
