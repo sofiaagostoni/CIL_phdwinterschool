@@ -1,18 +1,34 @@
+#[build-system]
+#requires = ["setuptools>=61.0"]
+#build-backend = "setuptools.build_meta"
+
+#[project]
+#name = "ISM"  # Il nome che userai in 'import ISM'
+#version = "0.1.0"
+#description = "Libreria per CIL PhD Winter School"
+#readme = "README.md"
+#requires-python = ">=3.7"
+#dependencies = [
+    # Aggiungi qui le librerie necessarie, es:
+    # "numpy",
+    # "h5py",
+#]
+
+#[tool.setuptools]
+#packages = ["ISM"]
+
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ISM"  # Il nome che userai in 'import ISM'
+name = "ISM"
 version = "0.1.0"
 description = "Libreria per CIL PhD Winter School"
 readme = "README.md"
 requires-python = ">=3.7"
-dependencies = [
-    # Aggiungi qui le librerie necessarie, es:
-    # "numpy",
-    # "h5py",
-]
+dependencies = []
 
-[tool.setuptools]
-packages = ["ISM"]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ISM*"]
